@@ -8,9 +8,56 @@ namespace ContactsApp
     class Contact
     {
         string ho;
+        public string Ho
+        {
+            get { return ho; }
+            set
+            {
+                if(ho.Length > 10)
+                    ho = "";
+                else
+                    ho = value;
+            }
+        }
+  
         string ten;
+        public string Ten
+        {
+            get { return ten; }
+            set
+            {
+                if(ten.Length > 10)
+                    ten = "";
+                else
+                    ten = value;
+            }
+        }
+  
         string diachi;
+        public string DiaChi
+        {
+            get { return diachi; }
+            set
+            {
+                if(diachi.Length > 10)
+                    diachi = "";
+                else
+                    diachi = value;
+            }
+        }
+  
         string sdt;
+        public string SDT
+        {
+            get { return sdt; }
+            set
+            {
+                if(sdt.Length > 10)
+                    sdt = "";
+                else
+                    sdt = value;
+            }
+        }
 
         public Contact(string ho, string ten, string diachi, string sdt)
         {
@@ -18,46 +65,6 @@ namespace ContactsApp
             this.ten = ten;
             this.diachi = diachi;
             this.sdt = sdt;
-        }
-
-        public void SetHo(string ho)
-        {
-            this.ho = ho;
-        }
-
-        public string GetHo()
-        {
-            return this.ho;
-        }
-
-        public void SetTen(string ten)
-        {
-            this.ten = ten;
-        }
-
-        public string GetTen()
-        {
-            return this.ten;
-        }
-
-        public void SetDiaChi(string diachi)
-        {
-            this.diachi = diachi;
-        }
-
-        public string GetDiaChi()
-        {
-            return this.diachi;
-        }
-
-        public void SetSDT(string sdt)
-        {
-            this.sdt = sdt;
-        }
-
-        public string GetSDT()
-        {
-            return this.sdt;
         }
     }
 }

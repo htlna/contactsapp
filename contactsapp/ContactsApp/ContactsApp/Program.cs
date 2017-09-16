@@ -37,10 +37,10 @@ namespace ContactsApp
             foreach (Contact c in danhba)
             {
                 Console.WriteLine("{0} - {1} - {2} - {3}",
-                                 c.GetHo(),
-                                 c.GetTen(),
-                                 c.GetDiaChi(),
-                                 c.GetSDT());
+                                 c.Ho(),
+                                 c.Ten(),
+                                 c.DiaChi(),
+                                 c.SDT());
             }
 
             XuLyFile.LuuDuLieuRaFile(danhba);
