@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 
 namespace ContactsApp
 {
@@ -10,6 +9,11 @@ namespace ContactsApp
         static void Main(string[] args)
         {
             List<Contact> danhba = new List<Contact>();
+
+            // doc du lieu tu file
+            if (File.Exists("contacts.txt"))
+                XuLyFile.LayDuLieuTuFile(danhba);
+
             char r;
             do
             {
@@ -29,7 +33,6 @@ namespace ContactsApp
                 Console.Write("Ban co muon tiep tuc nhap hay khong (y/n) ? ");
                 r = Console.ReadKey().KeyChar;
             } while (r == 'y');
-
             Console.WriteLine("\n\nDanh ba da nhap gom:");
             foreach (Contact c in danhba)
             {
@@ -39,6 +42,8 @@ namespace ContactsApp
                                  c.GetDiaChi(),
                                  c.GetSDT());
             }
+
+            XuLyFile.LuuDuLieuRaFile(danhba);
             Console.ReadLine();
         }
     }
