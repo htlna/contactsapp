@@ -11,28 +11,52 @@ namespace ContactsApp
         public string Ho
         {
             get { return ho; }
-            set { ho = value; }
+            set
+            {
+                if(ho.Length > 10)
+                    ho = "";
+                else
+                    ho = value;
+            }
         }
   
         string ten;
         public string Ten
         {
             get { return ten; }
-            set { ten = value; }
+            set
+            {
+                if(ten.Length > 10)
+                    ten = "";
+                else
+                    ten = value;
+            }
         }
   
         string diachi;
         public string DiaChi
         {
             get { return diachi; }
-            set { diachi = value; }
+            set
+            {
+                if(diachi.Length > 10)
+                    diachi = "";
+                else
+                    diachi = value;
+            }
         }
   
         string sdt;
         public string SDT
         {
             get { return sdt; }
-            set { sdt = value; }
+            set
+            {
+                if(sdt.Length > 10)
+                    sdt = "";
+                else
+                    sdt = value;
+            }
         }
 
         public Contact(string ho, string ten, string diachi, string sdt)
